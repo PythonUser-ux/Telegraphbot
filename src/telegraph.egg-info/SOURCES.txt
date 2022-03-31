@@ -1,0 +1,6 @@
+setup.py
+src/telegraph.py
+src/telegraph.egg-info/PKG-INFO
+src/telegraph.egg-info/SOURCES.txt
+src/telegraph.egg-info/dependency_links.txt
+src/telegraph.egg-info/top_level.txt

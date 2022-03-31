@@ -1,28 +1,18 @@
-#!/usr/bin/env python
 from setuptools import setup
 
-setup(name='Telegraph',
-      #version=version,
-      description='Python tool for Telegram bots.',
-      long_description=read('README.md'),
-      long_description_content_type="text/markdown",
-      author='PythonUser-ux',
-      author_email='andr_9v9@hotmail.com',
-      url='https://github.com/PythonUser-ux/Telegraph',
-      #packages = find_packages(exclude = ['tests', 'examples']),
-      license='GPL2',
-      keywords='telegram bot graph tool',
-      #install_requires=['requests'],
-      # extras_require={
-      #     'json': 'ujson',
-      #     'PIL': 'Pillow',
-      #     'redis': 'redis>=3.4.1'
-      # },
-      classifiers=[
-          'Development Status :: 5 - Production/Stable',
-          'Programming Language :: Python :: 3',
-          'Environment :: Console',
-          'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
-      ],
-      
-      )
+with open("README.md", "r") as fh:
+      long_description=fh.read()
+
+setup(
+   name='telegraph', 
+   version='0.0.1',
+   # packages=[],
+   license='MIT', 
+   description='tool for python Telegrom bots',
+
+   long_description=long_description,
+   long_description_content="text/markdown",
+   py_modules=["telegraph"],
+   package_dir={'': 'src'},
+   classifiers=["Programming Language :: Python ::3"]
+)
