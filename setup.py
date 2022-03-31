@@ -1,33 +1,23 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
-from io import open
-import re
+from setuptools import setup
 
-def read(filename):
-    with open(filename, encoding='utf-8') as file:
-        return file.read()
-
-with open('telebot/version.py', 'r', encoding='utf-8') as f:  # Credits: LonamiWebs
-    version = re.search(r"^__version__\s*=\s*'(.*)'.*$",
-                        f.read(), flags=re.MULTILINE).group(1)
-
-setup(name='pyTelegramBotAPI',
-      version=version,
-      description='Python Telegram bot api. ',
+setup(name='Telegraph',
+      #version=version,
+      description='Python tool for Telegram bots.',
       long_description=read('README.md'),
       long_description_content_type="text/markdown",
-      author='eternnoir',
-      author_email='eternnoir@gmail.com',
-      url='https://github.com/eternnoir/pyTelegramBotAPI',
-      packages = find_packages(exclude = ['tests', 'examples']),
+      author='PythonUser-ux',
+      author_email='andr_9v9@hotmail.com',
+      url='https://github.com/PythonUser-ux/Telegraph',
+      #packages = find_packages(exclude = ['tests', 'examples']),
       license='GPL2',
-      keywords='telegram bot api tools',
-      install_requires=['requests'],
-      extras_require={
-          'json': 'ujson',
-          'PIL': 'Pillow',
-          'redis': 'redis>=3.4.1'
-      },
+      keywords='telegram bot graph tool',
+      #install_requires=['requests'],
+      # extras_require={
+      #     'json': 'ujson',
+      #     'PIL': 'Pillow',
+      #     'redis': 'redis>=3.4.1'
+      # },
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Programming Language :: Python :: 3',
