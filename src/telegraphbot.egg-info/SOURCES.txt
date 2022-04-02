@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+src/telegraphbot.py
+src/telegraphbot.egg-info/PKG-INFO
+src/telegraphbot.egg-info/SOURCES.txt
+src/telegraphbot.egg-info/dependency_links.txt
+src/telegraphbot.egg-info/top_level.txt
