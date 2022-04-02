@@ -52,7 +52,7 @@ First of all look for [@BotFather](https://core.telegram.org/bots#botfather) on 
 ## Step 2: Design your bot
 > *Draw a graph of what your program will do*
 
-![](draft.png)
+![](Draft.png)
 
 It can be useful to make a draft of your bot if it becomes too complex.
 
