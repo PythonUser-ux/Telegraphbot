@@ -135,7 +135,7 @@ This function should not be called more than once.
 
 Here are some suggestions to shape your bot in greater detail.
 
-- Make large use of global variables to permanently modify your bot behaviour.
+- Make large use of global variables to modify your bot behaviour.
 
 - Define your own "unrecognized" function for each step and take into account that the default function can be defined in the following way:
 
