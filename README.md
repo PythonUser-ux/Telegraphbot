@@ -43,7 +43,9 @@ Only one node should have 0 depth.
 
 There can be arcs exiting from an edge which does not enter in any edge, this is because we may be only interested in the transition (a function call).
 
-Let's see the actual code.
+# Example
+
+Let's see how it works.
 
 ## Step 1: Obtaining an API token
 
@@ -128,6 +130,25 @@ my_bot.polling()
 ```
 
 This function should not be called more than once.
+
+# Hints and warnings
+
+Here are some suggestions to shape your bot in greater detail.
+
+- Make large use of global variables to permanently modify your bot behaviour.
+
+- Define your own "unrecognized" function for each step and take into account that the default function can be defined in the following way:
+
+```python
+def unrecognized(message):
+        s._bot.send_message(message.chat.id,"Unrecognized")
+        s._conversation.pop()
+        s._deep_degree-=1
+```
+
+Similarly to *actions* it should only take *message* as argument and you may want to arbitrarily modify the *_conversation* and the *_deep_degree* variables. <br>
+The first variable is the stack made by all the accepted answers by the user so far plus the last answer, so you would at least remove the latter.
+The second variable is the degree of depth, which should be decreased of exactly the number of words removed from the stack. <br> Those are the only limitations on the unrecognized function you choose.
 
 # Work in progress
 
