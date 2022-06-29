@@ -38,10 +38,10 @@ Using telegraphbot every conversation can be represented as an oriented graph in
 
 Therefore each input given by the user is associated with a function call which can do whatever you want!
 
-The conversation always start at depth 0 by simply launching the bot using the command "/start" in the chat.
-Only one node should have 0 depth in order to avoid undesired behaviour.
+The conversation always starts at depth 0 by simply launching the bot using the command "/start" in the chat.
+Only one node should have 0 depth.
 
-There can be arcs exiting from an edge which does not enter in any edge, this is because we may be only interested in the transition.
+There can be arcs exiting from an edge which does not enter in any edge, this is because we may be only interested in the transition (a function call).
 
 Let's see the actual code.
 
@@ -68,7 +68,7 @@ my_bot = BOT(name="Wall-e", token=API_TOKEN)
 
 ## Step 4: Make your "first steps"
 
-A conversation node is created calling the *chat_step* method inside a function that only takes *message* as argument. This choice is for compatibility reasons.
+A conversation node is created by defining a function taking only *message* as argument and its body is just a call of the *chat_step* method.
 
 ```python
 
