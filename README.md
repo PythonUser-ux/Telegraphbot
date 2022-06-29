@@ -43,7 +43,7 @@ Only one node should have 0 depth.
 
 There can be arcs exiting from an edge which does not enter in any edge, this is because we may be only interested in the transition (a function call).
 
-# Example
+# Example 1
 
 Let's see how it works.
 
@@ -131,13 +131,17 @@ my_bot.polling()
 
 This function should not be called more than once.
 
+# Example 2
+
+Controlling an Arduino burglar alarm I created by means of a bot made with *telegraphbot" 
+
 # Hints and warnings
 
 Here are some suggestions to shape your bot in greater detail.
 
-- Make large use of global variables to modify your bot behaviour.
+## Make large use of global variables to modify your bot behaviour.
 
-- Define your own "unrecognized" function for each step and take into account that the default function can be defined in the following way:
+## Define your own "unrecognized" function for each step and take into account that the default function can be defined in the following way:
 
 ```python
 def unrecognized(message):
@@ -149,6 +153,8 @@ def unrecognized(message):
 Similarly to *actions* it should only take *message* as argument and you may want to arbitrarily modify the *_conversation* and the *_deep_degree* variables. <br>
 The first variable is the stack made by all the accepted answers by the user so far plus the last answer, so you would at least remove the latter.
 The second variable is the degree of depth, which should be decreased of exactly the number of words removed from the stack. <br> Those are the only limitations on the unrecognized function you choose.
+
+## When creating an instance of the BOT class use the *allowed* argument to pass a list of strings of Telegram member ids to specify who is allowed to use the bot.
 
 # Work in progress
 
