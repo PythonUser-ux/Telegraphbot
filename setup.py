@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
    name='telegraphbot', 
-   version='0.0.3',
+   version='0.1',
    # packages=[],
    license='MIT', 
    description='A tool for python Telegram bots',
