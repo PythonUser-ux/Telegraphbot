@@ -77,7 +77,8 @@ unrecognized=my_bot.unrecognized
 chat_step=my_bot.chat_step
 
 def step0(message):
-    chat_step(0, message, "What are your orders?", ["Hit the console", "Give me an opinion"], [action1, lz], unrecognized, next_steps=[None,step1])
+    chat_step(0, message, None, ["Hit the console", "Give me an opinion"], [action1, lz], unrecognized, next_steps=[None,step1])
+my_bot.init_message="What are your orders?" # chat_step 0 needs this line to send the initial message of the node, but all the others make use of their "question" argument instead of it.
     
 def action1(message):
     for i in range(10):
