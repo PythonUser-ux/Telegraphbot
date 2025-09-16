@@ -52,7 +52,7 @@ First of all look for [@BotFather](https://core.telegram.org/bots#botfather) on 
 ## Step 2: Design your bot
 > *Drawing of a graph of what your program will do*
 
-![](Draft.png)
+![](Images/draft.png)
 
 It can be useful to make a draft of your bot as it gets more complex.
 
@@ -204,3 +204,4 @@ Always take the GitHub page as reference for the full tutorial.
 MIT Licence
 # Author
 Made by [Andrea Virgillito](https://github.com/PythonUser-ux).
+
